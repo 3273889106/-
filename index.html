@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="id=edge"/>
+    <link rel="stylesheet"  href="./css/main.css">
+    <title>悦享</title>
+</head>
+<body>
+<!-- 播放器主体样式  -->
+<div class="musicplayer">  
+<!-- 播放器title部分  -->
+<div class="front">
+    <!-- 播放器logo部分 -->
+    <div class="logo" >
+        <img src="./img/音乐.png" style="height: 32px; width: 32px;" alt="">
+    </div>
+    <div class="logoname">
+        <img src="./img/logoname.png" style="height: 30px; width: 60px;" alt="">
+    </div>
+    <!-- 搜索框样式 -->
+    <div id="insearch">
+           <input type="text" autocomplete="off" v-model="query" @keyup.enter="searchmusic">
+           <div class="searchlogo">
+              <a href="#"><img src="./img/搜索.png" alt="" style="height: 25px; width: 25px;" @click="searchmusic"></a>
+           </div>
+    </div>
+</div>
+<div class="middle" >
+    <div class="search_songs search_songs1" id="search_songs" >
+        <ul class="song_list">
+            <li v-for="item in recievemusiclist" style="list-style-type: none;">
+                <div class="a_songstyle">
+                   <div class="playlogo">
+                       <a href="#" style="text-decoration: none;" @click="playmusic(item.id)">
+                           <img src="./img/play.png" style="height: 20px; width: 20px;" alt="">
+                       </a>
+                   </div>
+                   <div class="songstext">
+                    <a href="#" style="text-decoration: none;" @click="playmusic(item.id)">
+                      <b>{{item.name}}</b>
+                    </a>
+                   </div>
+                   <div  v-if="item.mvid!=0" class="movielogo">
+                       <a href="#" @click="playmusicmv(item.mvid)">
+                       <img  src="./img/MV.png" style="height: 20px; width: 20px;" alt="">
+                        </a>
+                   </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="musicCover">
+        <div class="Coverlogo" id="rmusicCover">
+           <img :src="rmusicCover" style="height: 100%; width: 100%; border-radius: 100%;"  alt="">
+        </div>
+    </div>
+    <div class="hotcomment hotcomment_1" id="commentconmentlist">
+        <div class="ctitle">
+             <p>热门评论</p>
+        </div>
+        <div class="hotcomment_list">
+               <dl v-for="item in rmusicComments"> 
+                   <dt class="cpic">
+                        <img :src="item.user.avatarUrl" style=" height: 100%; width: 100%; border-radius: 100%;" alt="">  
+                   </dt>
+                   <dd class="name">{{item.user.nickname}}</dd>
+                   <dd class="detail">
+                    <div class="detail_1">
+                        {{item.content}}
+                       </div>
+                    </dd>
+   </dl>
+        </div>
+    </div>
+</div>
+<div class="bottom" id="playaudio">
+        <audio ref="audio" :src="recievemusicUrl" controls loop autoplay class="myaudio"></audio>
+</div>
+</div>
+<div v-show="rshow" class="mask" id="mask">
+    <div class="login-page">
+        <video :src="rmvurl"  style="position: relative; top: 100px; height: 400px; width: 100%;" loop controls="controls"></video>
+        <span class="close" id="close" @click="close">X</span>
+    </div>
+ </div>
+ <script src="./js/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/playmusic.js"></script>
+</body>
+</html>

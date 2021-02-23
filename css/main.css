@@ -1,0 +1,252 @@
+.musicplayer{
+    position: fixed;
+    top: 10%;
+    left: 15%;
+    height: 600px;
+     width: 70%;
+     border-radius: 10px;
+}
+.front{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgb(82, 146, 254);
+}
+.logo{
+    position: relative;
+    top: 10px;
+    left: 15px;
+    height: 35px;
+    width: 35px;
+    background-color: black;
+    border-radius: 25px;
+}
+.logoname{
+    position: relative;
+    top: -23px;
+    left: 55px;
+    height: 30px;
+    width: 60px;
+    background-color: white;
+}
+#insearch{
+    position: relative;
+    top: -52px;
+    left: 220px;
+    height: 30px;
+    width: 200px;
+    border:none;
+    border-radius: 5px;
+}
+#insearch input{
+     position: relative;
+     left: 0px;
+     top: 0px;
+     height: 24px;
+     width: 100%;
+     border-radius: 5px;
+     border:none;
+     outline: none; 
+     font-size: 9pt; 
+     color: rgb(244,93,93);  
+     background: white;
+}
+.searchlogo{
+    position: relative;
+    top: -25px;
+    left: 179px;
+    border-radius: 40px;
+    height: 25px;
+    width: 25px;
+}
+.middle{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: -webkit-linear-gradient(right,#9690e3,#b1f4cf);
+    background: -o-linear-gradient(right,#9690e3,#b1f4cf);
+    background: -moz-linear-gradient(right,#9690e3,#b1f4cf);
+    background: linear-gradient(right,#9690e3,#b1f4cf);
+}
+.search_songs{
+    position: absolute;
+    width: 33%;
+    height: 500px;
+    overflow: auto;
+    border-right: 2px solid hsla(0, 0%, 100%,.5);
+    background-clip:padding-box;
+}
+.search_songs1::-webkit-scrollbar{
+      width: 10px;
+      height: 1px;
+}
+.search_songs1::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    background: transparent;
+    /* 设置透明 */
+    
+}
+.search_songs1::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 10px;
+    background: transparent;
+}
+.song_list{
+    position: relative;
+    left: -30px;
+    top: -10px;
+}
+.a_songstyle{
+    position: relative;
+    top: -2px;
+    left: -5px;
+    height: 20px;
+    width: 180px;
+
+}
+.playlogo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+    width:  20px;
+}
+.songstext{
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    height: 20px;
+    width:  140px;
+    overflow: hidden;
+
+}
+.songstext b{
+    color: rgb(234,71,71);
+}
+.movielogo{
+    position: absolute;
+    top: 0px;
+    left: 160px;
+    height: 20px;
+    width:  20px;
+}
+.musicCover{
+    position: absolute;
+    top: 0px;
+    left: 33%;
+    width: 34%;
+    height: 500px;
+    border-right: 2px solid hsla(0, 0%, 100%,.5);
+    background-clip:padding-box;
+}
+.Coverlogo{
+    position: absolute;
+    left: 28%;
+    top: 30%;
+    width: 40%;
+    height: 30%;
+    border-radius: 100%;
+    background-color: whitesmoke;
+}
+.hotcomment{
+    position: absolute;
+    top: 0px;
+    left: 67%;
+    width: 33%;
+    height: 500px;
+    overflow: auto;
+    background-clip:padding-box;
+}
+.hotcomment_1::-webkit-scrollbar{
+    width: 10px;
+    height: 1px;
+}
+.hotcomment_1::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 10px;
+  background: transparent;
+  /* 设置透明 */
+  
+}
+.hotcomment_1::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 10px;
+  background: transparent;
+}
+.ctitle{
+    position: relative;
+    top: -15px;
+    left: 20px;
+    height: 30px;
+    width: 100%;
+    font-size: 22px;
+    color: chartreuse;
+}
+.cpic{
+   position: relative;
+   top: -15px;
+   left: 15px;
+   border-radius: 100%;
+   width: 60px;
+   height: 60px;
+}
+.name{
+    position: relative;
+   top: -85px;
+   left: 50px;
+}
+.detail{
+    position: relative;
+    top: -80px;
+    left: 45px;
+}
+.detail_1{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+}
+.bottom{
+    position: relative;
+    width: 100%; 
+    height: 50px;
+    border-radius:0px 0px 10px 10px;
+}
+/* 播放器样式 */
+.myaudio {
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    outline: none;
+    background-color: #f1f3f4;
+  }
+  /* 遮罩层样式 */
+  .mask{
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    opacity: s1;
+}
+.login-page{
+    position: fixed;
+    height: 500px;
+    width: 70%;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1000;
+    overflow: hidden;
+    background-color: black;
+    opacity: 1;
+}
+.close{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+}
